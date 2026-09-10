@@ -1,0 +1,14 @@
+warning: in the working copy of '.github/workflows/ci-cd.yml', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/.github/workflows/ci-cd.yml b/.github/workflows/ci-cd.yml[m
+[1mindex e8390c0..9e2b494 100644[m
+[1m--- a/.github/workflows/ci-cd.yml[m
+[1m+++ b/.github/workflows/ci-cd.yml[m
+[36m@@ -22,7 +22,7 @@[m [mjobs:[m
+           python-version: "3.12"[m
+ [m
+       - name: Install dependencies[m
+[31m-        run: pip install -r requirements.txt[m
+[32m+[m[32m        run: python -m pip install -r requirements.txt[m
+ [m
+       - name: Run tests[m
+         run: python -m pytest[m
