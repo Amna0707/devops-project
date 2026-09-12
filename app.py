@@ -1,17 +1,17 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def home():
-    return """
-    <h1>DevOps Project</h1>
-    <p>My CI/CD pipeline is working!</p>
-    """
+    return "DevOps Pipeline is Working!"
+
 
 @app.route("/health")
 def health():
-    return {"status": "healthy"}
+    return jsonify(status="healthy")
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
